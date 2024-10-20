@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidad Ocelote</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="indice.css">
 </head>
 <body>
     <header>
         <h1>Bienvenido a mi sitio web</h1>
+        <button id="toggleTheme">Cambiar Tema</button>
     </header>
 
     <!-- Contenedor principal -->
@@ -20,33 +21,52 @@
                 <li><a href="#seccion1">Entrevistas</a></li>
                 <li><a href="#seccion2">Videos de apoyo</a></li>
                 <li><a href="#seccion3">Material de apoyo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
         <!-- Fin del índice lateral -->
 
-    <!-- Contenido principal -->
-    <div class="content">
-        <main>
-            <p>Esta es una página para subir material de apoyo para la comunidad de la Facultad de Estudios Superiores Zaragoza.</p>
-            <button id="clickButton">Haz clic aquí</button>
-            <p id="vistas">Vistas: 0</p> <!-- Párrafo donde se mostrará el número de clics -->
-            
-            <!-- Secciones de ejemplo -->
-            <h2 id="seccion1">Entrevistas</h2>
-            <p>Contenido de la sección 1.</p>
-            
-            <h2 id="seccion2">Videos de apoyo</h2>
-            <p>Contenido de la sección 2.</p>
+        <!-- Contenido principal -->
+        <div class="content">
+            <main>
+                <p>Esta es una página para subir material de apoyo para la comunidad de la Facultad de Estudios Superiores Zaragoza.</p>
+                <button id="clickButton">Haz clic aquí</button>
+                <p id="vistas">Vistas: 0</p> <!-- Párrafo donde se mostrará el número de clics -->
+                
+                <!-- Secciones de ejemplo -->
+                <h2 id="seccion1">Entrevistas</h2>
+                <p>Contenido de la sección 1.</p>
+                
+                <h2 id="seccion2">Videos de apoyo</h2>
+                <p>Contenido de la sección 2.</p>
 
-            <h2 id="seccion3">Material de apoyo</h2>
-            <p>Contenido de la sección 3.</p>
-        </main>
+                <h2 id="seccion3">Material de apoyo</h2>
+                <p>Contenido de la sección 3.</p>
+            </main>
+        </div>
     </div>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
     <footer>
         <p>&copy; 2024 Mi Sitio Web</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="indice.js"></script>
 </body>
 </html>
