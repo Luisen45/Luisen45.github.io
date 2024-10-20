@@ -1,17 +1,52 @@
-/* Estilos para el índice lateral */
-.sidebar {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    padding-top: 20px;
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.sidebar h2 {
-    color: white;
+/* Tema claro (por defecto) */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Tema oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Estilos para el encabezado y título */
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header h1 {
     text-align: center;
+    margin: 0;
+    animation: colorChange 10s infinite;
+}
+
+/* Animación del título */
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: red; }
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    width: 200px;
+    background-color: #ddd;
+    padding: 20px;
 }
 
 .sidebar ul {
@@ -19,23 +54,69 @@
     padding: 0;
 }
 
-.sidebar ul li {
-    padding: 10px;
-    text-align: center;
-}
-
-.sidebar ul li a {
-    color: white;
+.sidebar li a {
     text-decoration: none;
+    color: inherit;
     display: block;
+    padding: 10px;
 }
 
-.sidebar ul li a:hover {
-    background-color: #575757;
+.sidebar li a:hover {
+    background-color: #bbb;
+    color: #fff;
 }
 
-/* Estilo para el contenido principal, para que no quede detrás del índice */
+/* Estilos para el contenido */
 .content {
-    margin-left: 220px;
+    flex: 1;
     padding: 20px;
+}
+
+/* Estilos para botones */
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de cambiar tema */
+#toggleTheme {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+}
+
+/* Estilos para el formulario de contacto */
+#contacto {
+    padding: 20px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label {
+    margin-top: 10px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contactForm button {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
 }
