@@ -26,15 +26,11 @@ boton.addEventListener('click', function() {
 });
 
 // Manejo del cambio de tema (oscuro y claro)
-let currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+let currentTheme = localStorage.getItem('theme') || 'light';
 document.body.classList.add(currentTheme + '-mode');
 
 toggleThemeButton.addEventListener('click', function() {
-    if (currentTheme === 'light') {
-        currentTheme = 'dark';
-    } else {
-        currentTheme = 'light';
-    }
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
     // Actualiza la clase del body
     document.body.classList.toggle('light-mode');
     document.body.classList.toggle('dark-mode');
