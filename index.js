@@ -5,16 +5,24 @@ const toggleThemeButton = document.getElementById('toggleTheme');
 const contactForm = document.getElementById('contactForm');
 
 // Manejo del contador de vistas utilizando localStorage
-let contadorVistas = localStorage.getItem('contadorVistas') ? parseInt(localStorage.getItem('contadorVistas')) : 0;
+let contadorVistas = parseInt(localStorage.getItem('contadorVistas')) || 0;
 
 // Actualiza el texto al cargar la página
 vistasTexto.innerText = 'Vistas: ' + contadorVistas;
 
 // Evento para incrementar el contador y actualizar el texto
 boton.addEventListener('click', function() {
-    contadorVistas++; // Incrementa el contador
-    vistasTexto.innerText = 'Vistas: ' + contadorVistas; // Actualiza el texto en la página
-    localStorage.setItem('contadorVistas', contadorVistas); // Guarda el contador en localStorage
+    if (contadorVistas < 100) {
+        contadorVistas++; // Incrementa el contador
+        vistasTexto.innerText = 'Vistas: ' + contadorVistas; // Actualiza el texto en la página
+        localStorage.setItem('contadorVistas', contadorVistas); // Guarda el contador en localStorage
+
+        if (contadorVistas === 100) {
+            alert('¡Gracias, visitante número 100!');
+        }
+    } else {
+        alert('Ya hemos alcanzado el límite de 100 visitas. ¡Gracias!');
+    }
 });
 
 // Manejo del cambio de tema (oscuro y claro)
