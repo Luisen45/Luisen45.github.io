@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Excel</title>
+    <title>Contador de Vistas y Calculadora Excel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-mode">
 
-    <h1>Calculadora Excel en la Web</h1>
+    <h1>Bienvenido a Mi Sitio Web</h1>
+    <p id="vistas">Vistas: 0</p>
+    <button id="clickButton">Haz clic aquí</button>
+
+    <button id="toggleTheme">Cambiar Tema</button>
+
+    <h2>Calculadora Excel en la Web</h2>
     <input type="file" id="upload" />
     <button id="export">Exportar Hoja Modificada</button>
-    <br><br>
     <div id="excel-container"></div>
+
+    <form id="contactForm">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <script src="script.js"></script>
