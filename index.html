@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Vistas y Calculadora Excel</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="light-mode">
+<!-- Navegación -->
+<nav>
+  <ul>
+    <li><a href="#encuesta1">Encuesta 1</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#encuesta2">Encuesta 2</a></li>
+    <li><a href="#ganadores">Ganadores</a></li>
+  </ul>
+</nav>
 
-    <h1>Bienvenido a Mi Sitio Web</h1>
-    <p id="vistas">Vistas: 0</p>
-    <button id="clickButton">Haz clic aquí</button>
+<!-- Contenido -->
+<section id="encuesta1">
+  <h2>Encuesta 1</h2>
+  <!-- Insertar Google Form aquí -->
+  <iframe src="URL_DE_TU_ENCUESTA_1" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+</section>
 
-    <button id="toggleTheme">Cambiar Tema</button>
+<section id="video">
+  <h2>Video</h2>
+  <!-- Insertar video aquí -->
+  <video width="640" height="360" controls>
+    <source src="URL_DE_TU_VIDEO.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+  <!-- O puedes usar un iframe si el video está en YouTube -->
+  <!--
+  <iframe width="560" height="315" src="URL_DE_TU_VIDEO" frameborder="0" allowfullscreen></iframe>
+  -->
+</section>
 
-    <h2>Calculadora Excel en la Web</h2>
-    <input type="file" id="upload" />
-    <button id="export">Exportar Hoja Modificada</button>
-    <div id="excel-container"></div>
+<section id="encuesta2">
+  <h2>Encuesta 2</h2>
+  <!-- Insertar segunda Google Form aquí -->
+  <iframe src="URL_DE_TU_ENCUESTA_2" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+</section>
 
-    <form id="contactForm">
-        <input type="text" id="nombre" placeholder="Nombre" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="mensaje" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+<section id="ganadores">
+  <h2>Ganadores</h2>
+  <p>Contenido sobre los ganadores.</p>
+</section>
