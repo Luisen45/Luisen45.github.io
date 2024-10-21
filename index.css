@@ -1,50 +1,35 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
+    font-family: Arial, sans-serif;
     padding: 20px;
-}
-
-.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-.light-mode {
-    background-color: #fff;
-    color: #333;
+    background-color: #f4f4f4;
 }
 
 h1 {
     font-size: 24px;
 }
 
-p {
-    font-size: 18px;
-}
-
 button {
+    margin: 10px 0;
     padding: 10px;
     font-size: 16px;
-    margin-top: 10px;
 }
 
-form input, form textarea {
+#excel-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-form button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }
 
-form button:hover {
-    background-color: #0056b3;
+th {
+    background-color: #f2f2f2;
 }
