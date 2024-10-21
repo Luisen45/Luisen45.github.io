@@ -12,16 +12,12 @@ vistasTexto.innerText = 'Vistas: ' + contadorVistas;
 
 // Evento para incrementar el contador y actualizar el texto
 boton.addEventListener('click', function() {
-    if (contadorVistas < 100) {
-        contadorVistas++; // Incrementa el contador
-        vistasTexto.innerText = 'Vistas: ' + contadorVistas; // Actualiza el texto en la página
-        localStorage.setItem('contadorVistas', contadorVistas); // Guarda el contador en localStorage
+    contadorVistas++; // Incrementa el contador
+    vistasTexto.innerText = 'Vistas: ' + contadorVistas; // Actualiza el texto en la página
+    localStorage.setItem('contadorVistas', contadorVistas); // Guarda el contador en localStorage
 
-        if (contadorVistas === 100) {
-            alert('¡Gracias, visitante número 100!');
-        }
-    } else {
-        alert('Ya hemos alcanzado el límite de 100 visitas. ¡Gracias!');
+    if (contadorVistas === 100) {
+        alert('¡Gracias, visitante número 100!');
     }
 });
 
