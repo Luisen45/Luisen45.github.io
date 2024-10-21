@@ -1,218 +1,50 @@
-/* Estilos generales */
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
 }
 
-/* Tema claro (por defecto) */
-body.light-mode {
-    background-color: #f0f0f0;
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
     color: #333;
 }
 
-/* Tema oscuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
+h1 {
+    font-size: 24px;
 }
 
-/* Estilos para el encabezado y título */
-header {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    padding: 20px;
-    position: relative;
+p {
+    font-size: 18px;
 }
 
-header h1 {
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    font-size: 2.5em;
-    animation: colorChange 10s infinite;
-}
-
-/* Animación del título */
-@keyframes colorChange {
-    0% { color: #fff; }
-    25% { color: #f0f0f0; }
-    50% { color: #fff; }
-    75% { color: #f0f0f0; }
-    100% { color: #fff; }
-}
-
-/* Contenedor principal */
-.main-container {
-    display: flex;
-}
-
-/* Estilos para la barra lateral */
-.sidebar {
-    width: 220px;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    min-height: calc(100vh - 60px);
-}
-
-.sidebar h2 {
-    color: #feb47b;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar li a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    padding: 10px;
-}
-
-.sidebar li a:hover {
-    background-color: #444;
-    color: #feb47b;
-}
-
-/* Estilos para el contenido */
-.content {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-}
-
-.content main h2 {
-    color: #ff7e5f;
-    border-bottom: 2px solid #feb47b;
-    padding-bottom: 5px;
-}
-
-.content main p {
-    line-height: 1.6;
-}
-
-/* Estilos para botones */
 button {
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-#clickButton {
-    background-color: #ff7e5f;
-    color: #fff;
-}
-
-#clickButton:hover {
-    background-color: #feb47b;
-}
-
-#toggleTheme {
-    position: fixed;
-    top: 10px;
-    right: 10px;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-#toggleTheme:hover {
-    background-color: #444;
-}
-
-/* Estilos para el formulario de contacto */
-#contacto {
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-#contactForm {
-    display: flex;
-    flex-direction: column;
-}
-
-#contactForm label {
+    font-size: 16px;
     margin-top: 10px;
 }
 
-#contactForm input,
-#contactForm textarea {
-    padding: 10px;
-    margin-top: 5px;
+form input, form textarea {
     width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contactForm button {
-    margin-top: 15px;
     padding: 10px;
-    background-color: #ff7e5f;
-    color: #fff;
-    border: none;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-#contactForm button:hover {
-    background-color: #feb47b;
-}
-
-/* Estilos para el footer */
-footer {
-    background-color: #f4f4f4;
-    text-align: center;
+form button {
+    background-color: #007BFF;
+    color: white;
     padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Estilos para el modo oscuro */
-body.dark-mode header {
-    background: linear-gradient(90deg, #2c3e50, #4ca1af);
-}
-
-body.dark-mode .sidebar {
-    background-color: #1e1e1e;
-}
-
-body.dark-mode .sidebar li a {
-    color: #bbb;
-}
-
-body.dark-mode .sidebar li a:hover {
-    background-color: #444;
-    color: #4ca1af;
-}
-
-body.dark-mode .content {
-    background-color: #2e2e2e;
-    color: #fff;
-}
-
-body.dark-mode #clickButton {
-    background-color: #4ca1af;
-    color: #fff;
-}
-
-body.dark-mode #clickButton:hover {
-    background-color: #2c3e50;
-}
-
-body.dark-mode #toggleTheme {
-    background-color: #444;
-}
-
-body.dark-mode #contacto {
-    background-color: #1e1e1e;
-}
-
-body.dark-mode #contactForm input,
-body.dark-mode #contactForm textarea {
-    background-color: #2e2e2e;
-    color: #fff;
-    border: 1px solid #555;
+form button:hover {
+    background-color: #0056b3;
 }
